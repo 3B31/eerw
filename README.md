@@ -1,105 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Calculator</title>
+    <title>3B 31's Website</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #282c34;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            text-align: left; /* Align all text to the left */
+            margin: 0; /* Remove default margin */
         }
-        #calculator {
-            width: 360px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+        .header {
+            text-align: center; /* Center the header */
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 20px;
-            font-size: 32px;
-            border: none;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: right;
-            background-color: #f0f0f0;
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 10px; /* Space between images */
+            justify-items: center; /* Center images in their grid cells */
+            margin: 20px auto; /* Center grid in the page */
         }
-        button {
-            width: 80px;
-            height: 80px;
-            font-size: 24px;
-            margin: 10px;
-            border: none;
-            border-radius: 10px;
-            background-color: #61dafb;
-            color: #282c34;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-        }
-        button:hover {
-            background-color: #21a1f1;
-        }
-        button:active {
-            transform: scale(0.95);
-        }
-        .button-row {
-            display: flex;
-            justify-content: center;
+        .input-container {
+            margin: 20px; /* Add some margin */
+            max-width: 400px; /* Set a maximum width for the input container */
         }
     </style>
 </head>
+
 <body>
-    <div id="calculator">
-        <input type="text" id="result" disabled>
-        <div class="button-row">
-            <button onclick="clearResult()">C</button>
-            <button onclick="appendToResult('7')">7</button>
-            <button onclick="appendToResult('8')">8</button>
-            <button onclick="appendToResult('9')">9</button>
-            <button onclick="appendToResult('/')">÷</button>
-        </div>
-        <div class="button-row">
-            <button onclick="appendToResult('4')">4</button>
-            <button onclick="appendToResult('5')">5</button>
-            <button onclick="appendToResult('6')">6</button>
-            <button onclick="appendToResult('*')">×</button>
-        </div>
-        <div class="button-row">
-            <button onclick="appendToResult('1')">1</button>
-            <button onclick="appendToResult('2')">2</button>
-            <button onclick="appendToResult('3')">3</button>
-            <button onclick="appendToResult('-')">−</button>
-        </div>
-        <div class="button-row">
-            <button onclick="appendToResult('0')">0</button>
-            <button onclick="calculateResult()">=</button>
-            <button onclick="appendToResult('+')">+</button>
-        </div>
-    </div>
 
-    <script>
-        function appendToResult(value) {
-            document.getElementById('result').value += value;
-        }
+<h1 class="header" style="background-color: #42f5ef; font-size: 40px;">3B 31's Website</h1>
 
-        function clearResult() {
-            document.getElementById('result').value = '';
-        }
+<p style="font-size: 25px; background-color: Yellow;">
+    I am <span style="color: red;">Jacky Yu.</span><br>
+    Nice to meet you.<br>Email: s220xxx@gmail.com<br>
+    <a href="https://www.example.com" style="color: blue; text-decoration: underline;">Go to school</a>
+</p>
 
-        function calculateResult() {
-            const resultField = document.getElementById('result');
-            try {
-                resultField.value = eval(resultField.value);
-            } catch (e) {
-                resultField.value = 'Error';
-            }
-        }
-    </script>
+<h2>My Photos</h2>
+<div class="photo-grid">
+    <img src="photo1.jpg" alt="no photo" width="104" height="142">
+    <img src="photo2.jpg" alt="no photo" width="104" height="142">
+    <img src="photo3.jpg" alt="no photo" width="104" height="142">
+    <img src="photo4.jpg" alt="no photo" width="104" height="142">
+    <img src="photo5.jpg" alt="no photo" width="104" height="142">
+    <img src="photo6.jpg" alt="no photo" width="104" height="142">
+    <img src="photo7.jpg" alt="no photo" width="104" height="142">
+    <img src="photo8.jpg" alt="no photo" width="104" height="142">
+    <img src="photo9.jpg" alt="no photo" width="104" height="142">
+</div>
+
+<p>Can you see the photos?</p>
+<input type="range"> 
+<select>
+    <option>See, very beautiful</option>
+    <option>No! You even do not put the photo!?</option>
+</select>
+
+<div class="input-container">
+    <label>First name: <input type="text"></label><br>
+    <label>Last name: <input type="text"></label>
+</div>
+
+<img src="Timetable.jpg" alt="Class Timetable" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
+
 </body>
 </html>
